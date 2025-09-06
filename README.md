@@ -1,4 +1,5 @@
 # Python Basics
 
-Pebelajaran python 3 dasar di HSI Boarding School Purworejo
+Pembelajaran python Dasar di HSI Boarding School Purworejo
+
 
