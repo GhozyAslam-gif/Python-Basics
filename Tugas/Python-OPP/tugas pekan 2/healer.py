@@ -2,28 +2,28 @@ from hero import Hero
 
 class Healer(Hero):
     def __init__(self, name, hp):
-        # super() = mengekses parent class (Hero)
-       super().__init__(name, hp, job="Healer")
+        super().__init__(name, hp, job="Healer")
 
-    def skill1(self, enemy):
+    def skill1(self, ally):
         heal_amount = 75
-        print(f"💚 {self.name} menggunakan Skill 1: Holy Healing!")
-        print(f"dengan heal {heal_amount}")
-        # monster terkena damage
-        self.heal()
+        # Menambahkan info target heal di print agar lebih jelas
+        print(f"💚 {self.name} menggunakan Skill 1: Holy Healing ke {ally.name}!")
+        
+        # PERBAIKAN DI SINI: ganti self menjadi ally
+        ally.healer(heal_amount)
 
-    def skill2(self, enemy):
+    def skill2(self, ally):
         heal_amount = 50
-        print(f"💚 {self.name} menggunakan Skill 2: Love Waves!")
-        print(f"dengan heal {heal_amount}")
-        # monster terkena damage
-        self.heal()
+        print(f"💚 {self.name} menggunakan Skill 2: Love Waves ke {ally.name}!")
+        
+        # PERBAIKAN DI SINI
+        ally.healer(heal_amount)
 
-    # method baru khusus healer aja
-    def ultimate(self, enemy):
+    def ultimate(self, ally):
         heal_amount = 85
-        print(f"💚 {self.name} menggunakan Ultimate: Blessing of Moon Goddess {heal_amount}")
-        # monster terkena damage
-        self.heal()
-        self.heal()
-        self.heal()
+        print(f"💚 {self.name} menggunakan Ultimate: Blessing of Moon Goddess ke {ally.name}!")
+        
+        # PERBAIKAN DI SINI (3x heal ke ally)
+        ally.healer(heal_amount)
+        ally.healer(heal_amount)
+        ally.healer(heal_amount)

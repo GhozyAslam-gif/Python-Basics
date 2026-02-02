@@ -7,11 +7,15 @@ class Hero:
         self.hp = hp
         print(f"✨ [{self.job}] Hero {self.name} telah di summon!")
 
-    def heal(self):
+    def heal(self, enemy, amount):
         print(f"🧪 {self.name} meminum potion...")
         heal_amount = 20
         self.hp += heal_amount
         print(f"💚 HP {self.name} bertambah +{heal_amount}")
+
+    def healer(self, amount):
+        self.hp += amount
+        print(f"✨ {self.name} mendapatkan heal {amount}. HP sekarang: {self.hp}")
 
     def take_damage(self, damage):
         # self.hp = self.hp - damage (aslinya)
@@ -20,6 +24,7 @@ class Hero:
         print(f"❤️ Sisa HP: {self.hp}")
         if self.hp <= 0:
             print(f"💀 {self.name} tereliminasi dari arena!")
+            return
 
     def attack(self, enemy, damage):
         print(f"⚔️ {self.name} menyerang {enemy.name}!")
@@ -36,5 +41,5 @@ class Hero:
     # skill ultimate (dasar)
     def ultimate(self, enemy):
         dmg = 100
-        print(f"🔥 {self.name} Ultimate : 'Abysm Strike' !")
+        print(f"🔥 {self.name} Ultimate : 'Bengong' !")
         enemy.take_damage(dmg)

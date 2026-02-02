@@ -14,7 +14,7 @@ class Warrior(Hero):
 
     def skill2(self, enemy):
         dmg = 85
-        print(f"⚔️ {self.name} menggunakan Skill 2: ")
+        print(f"⚔️ {self.name} menggunakan Skill 2: Whirling Smash!")
         print(f"dengan damage {dmg} DMG")
         # monster terkena damage
         enemy.take_damage(dmg)
@@ -22,8 +22,7 @@ class Warrior(Hero):
     # method baru khusus mage aja
     def ultimate(self, enemy):
         dmg = 20
-        print(f"⚔️ {self.name} menggunakan Ultimate: WATER CANON x3 {dmg} DMG")
+        print(f"⚔️ {self.name} menggunakan Ultimate: Lethal Counter!")
+        print(f"dengan damage {dmg} DMG")
         # monster terkena damage
-        enemy.take_damage(dmg)
-        enemy.take_damage(dmg)
         enemy.take_damage(dmg)
