@@ -42,7 +42,7 @@ class Monster:
         enemy.take_damage(damage)
 
     def ultimate(self, enemy):
-        dmg = 100
+        dmg = 93
         print(f"🔥 {self.name} Ultimate : 'Cauterant Inferno'!")
 
         if self.rage_mode:

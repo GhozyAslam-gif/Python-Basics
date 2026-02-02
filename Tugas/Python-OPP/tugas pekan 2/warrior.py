@@ -6,14 +6,14 @@ class Warrior(Hero):
        super().__init__(name, hp, job="Warrior")
 
     def skill1(self, enemy):
-        dmg = 100
+        dmg = 45
         print(f"⚔️ {self.name} menggunakan Skill 1: Gigantic Slash!")
         print(f"dengan damage {dmg} DMG")
         # monster terkena damage
         enemy.take_damage(dmg)
 
     def skill2(self, enemy):
-        dmg = 85
+        dmg = 55
         print(f"⚔️ {self.name} menggunakan Skill 2: Whirling Smash!")
         print(f"dengan damage {dmg} DMG")
         # monster terkena damage
@@ -21,7 +21,7 @@ class Warrior(Hero):
 
     # method baru khusus mage aja
     def ultimate(self, enemy):
-        dmg = 20
+        dmg = 75
         print(f"⚔️ {self.name} menggunakan Ultimate: Lethal Counter!")
         print(f"dengan damage {dmg} DMG")
         # monster terkena damage

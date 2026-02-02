@@ -13,17 +13,16 @@ class Healer(Hero):
         ally.healer(heal_amount)
 
     def skill2(self, ally):
-        heal_amount = 50
+        heal_amount = 80
         print(f"💚 {self.name} menggunakan Skill 2: Love Waves ke {ally.name}!")
         
         # PERBAIKAN DI SINI
         ally.healer(heal_amount)
 
     def ultimate(self, ally):
-        heal_amount = 85
+        heal_amount = 55
         print(f"💚 {self.name} menggunakan Ultimate: Blessing of Moon Goddess ke {ally.name}!")
         
         # PERBAIKAN DI SINI (3x heal ke ally)
-        ally.healer(heal_amount)
         ally.healer(heal_amount)
         ally.healer(heal_amount)

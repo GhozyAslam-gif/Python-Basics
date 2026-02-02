@@ -21,7 +21,7 @@ class Mage(Hero):
 
     # method baru khusus mage aja
     def ultimate(self, enemy):
-        dmg = 100
+        dmg = 50
         print(f"⚔️ {self.name} menggunakan Ultimate: Bats Feast {dmg} DMG")
         # monster terkena damage
         enemy.take_damage(dmg)
